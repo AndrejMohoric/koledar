@@ -1,0 +1,36 @@
+* {
+    font-family: 'Source Serif Pro', serif;
+}
+
+body {
+    background-color:#25274D;
+
+}
+h1 {    
+    color: #2e9cca;
+    text-align: center;
+    margin: 10px;
+}
+p {
+    text-align: center;
+    color: #aaabb8;
+}
+
+.card {
+    background-color: #464866;
+  }
+#koledarContainer{
+    margin-top: 20px;
+     border-radius: 3px;
+}
+
+#koledarContainer .container .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col{
+    margin-bottom: 10px;
+}
+
