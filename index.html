@@ -10,9 +10,12 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-  <!--Css file-->
-  <link rel="stylesheet" type="text/css" href="css/general.css">
+  <!--Css files-->
+  <link rel="stylesheet" type="text/css" href="css/skupniStili.css">
   <link rel="stylesheet" type="text/css" href="css/koledar.css">
+  <link rel="stylesheet" type="text/css" href="css/sporocila.css">
+
+ 
 
   <!--Google font-->
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,700;1,400;1,600&display=swap" rel="stylesheet"> 
@@ -33,56 +36,52 @@
     <div class="row mx-lg-n5">
       <div class="row mx-auto">
 
-        <!--Prvi obrazec-->
+        <!--prvi levi obrazec-->
         <div class="col-sm-6">
           <div class="card" style="width: 100%; height: 100%;">
             <div class="card-body">
               <p class="card-text">Izpolji polji in pritisni gumb <strong>Potrdi</strong>.</p>
-
               <div class="input-group">
                 <div class="input-group-prepend">
                   <label class="input-group-text" for="inputGroupSelect01">Izberi mesec</label>
                 </div>
 
                 <!--Izberi mesec-->
-                <select class="custom-select" id="inputGroupSelect01">
-                  <option selected>Izberi...</option>
-                  <option value="1">januar</option>
-                  <option value="2">februar</option>
-                  <option value="3">marec</option>
-                  <option value="4">april</option>
-                  <option value="5">maj</option>
-                  <option value="6">junij</option>
-                  <option value="7">julij</option>
-                  <option value="8">avgust</option>
-                  <option value="9">september</option>
-                  <option value="10">oktober</option>
-                  <option value="11">november</option>
-                  <option value="12">december</option>
+                <select id="izbraniMesec" class="custom-select" id="inputGroupSelect01">
+                  <option selected value="0">januar</option>
+                  <option value="1">februar</option>
+                  <option value="2">marec</option>
+                  <option value="3">april</option>
+                  <option value="4">maj</option>
+                  <option value="5">junij</option>
+                  <option value="6">julij</option>
+                  <option value="7">avgust</option>
+                  <option value="8">september</option>
+                  <option value="9">oktober</option>
+                  <option value="10">november</option>
+                  <option value="11">december</option>
                 </select>
               </div>
               <br>
+
               <!--Izberi leto-->
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="basic-addon1">Vpiši leto</span>
                 </div>
-                <input type="text" class="form-control" placeholder="2020" aria-label="VpisiLeto"
+                <input id="vpisanoLeto" type="text" class="form-control" placeholder="leto" aria-label="VpisiLeto"
                   aria-describedby="basic-addon1">
               </div>
-
-
             </div>
 
             <!--Gumb1-->
             <div class="col text-center">
-              <button type="button" class="btn btn-primary">Potrdi</button>
+              <button onClick="gumb1_click()" type="button" class="btn btn-primary">Potrdi</button>
             </div>
-
           </div>
         </div>
 
-        <!--Drugi obrazec-->
+        <!-- drugi desni obrazec-->
         <div class="col-sm-6">
           <div class="card" style="width: 100%; height: 100%;">
             <div class="card-body">
@@ -93,7 +92,7 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="basic-addon1">Vpiši datum</span>
                 </div>
-                <input type="text" class="form-control" placeholder="d.m.yyyy" aria-label="VpisiDatum"
+                <input id="vpisaniDatum" type="text" class="form-control" placeholder="d.m.llll" aria-label="VpisiDatum"
                   aria-describedby="basic-addon1">
               </div>
               <br>
@@ -101,85 +100,55 @@
 
             <!--Gumb2-->
             <div class="col text-center">
-              <button type="button" class="btn btn-primary">Potrdi</button>
+              <button onClick="gumb2_click()" type="button" class="btn btn-primary">Potrdi</button>
             </div>
+
           </div>
         </div>
-
       </div>
-
     </div>
   </div>
 
   <!--koledar-->
   <div id="koledarContainer" class="container px-lg-5">
-    <div class="container px-lg-5">
       <div class="container px-lg-5 mx-auto">
-        <div class="koledar">
-          <div class="mesec">
-            <div class="datum">
-              <h3>Mesec</h3>
-              <p>Pon maj 29, 2020</p>
-            </div>
-          </div>
-          <div class="dneviTedna">
-            <div>pon</div>
-            <div>tor</div>
-            <div>sre</div>
-            <div>cet</div>
-            <div>pet</div>
-            <div>sob</div>
-            <div>ned</div>
-          </div>
-          <div class="dnevi">
-            <div class="dneviPrejsnegaMeseca">26</div>
-            <div class="dneviPrejsnegaMeseca">27</div>
-            <div class="dneviPrejsnegaMeseca">28</div>
-            <div class="dneviPrejsnegaMeseca">29</div>
-            <div class="dneviPrejsnegaMeseca">30</div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>10</div>
-            <div>11</div>
-            <div>12</div>
-            <div>13</div>
-            <div>14</div>
-            <div>15</div>
-            <div>16</div>
-            <div>17</div>
-            <div>18</div>
-            <div>19</div>
-            <div>20</div>
-            <div>21</div>
-            <div>22</div>
-            <div>23</div>
-            <div>24</div>
-            <div>25</div>
-            <div>26</div>
-            <div>27</div>
-            <div>28</div>
-            <div>29</div>
-            <div>30</div>
-            <div>31</div>
-            <div class="dneviNaslednjegaMeseca">1</div>
-            <div class="dneviNaslednjegaMeseca">2</div>
-            <div class="dneviNaslednjegaMeseca">3</div>
-            <div class="dneviNaslednjegaMeseca">4</div>
-            <div class="dneviNaslednjegaMeseca">5</div>
-            <div class="dneviNaslednjegaMeseca">6</div>
-          </div>
+
+        <!--Sporocilo uporabniku ob pravilnem in nepravilnem vnosu podatkov-->
+        <div class="row justify-content-md-center">
+          <div id="sporociloAkcije"></div>
         </div>
 
+        <div class="row justify-content-md-center">
+          <div class="koledar">
+            <div class="mesec">
+              <div class="datum">
+                <h3 id="prikazMeseca">Mesec</h3>
+                <p id="prikazDatuma">Pon maj 29, 2020</p>
+              </div>
+            </div>
+            <div class="dneviTedna">
+              <div>pon</div>
+              <div>tor</div>
+              <div>sre</div>
+              <div>čet</div>
+              <div>pet</div>
+              <div>sob</div>
+              <div>ned</div>
+            </div>
+            <div id="dnevi" class="dnevi">
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
   </div>
+
+   <!--js files-->
+   <script src="js/konstante.js"></script> 
+   <script src="js/mesec.js"></script> 
+   <script src="js/metode.js"></script> 
+   <script src="js/koledar.js"></script>
+   <script src="js/sporocila.js"></script>  
+   <script src="js/inicializacija.js"></script> 
 
   <!--Bootstrap js-->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

@@ -1,10 +1,8 @@
 * {
     font-family: 'Source Serif Pro', serif;
 }
-
 body {
     background-color:#25274D;
-
 }
 h1 {    
     color: #2e9cca;
@@ -15,22 +13,20 @@ p {
     text-align: center;
     color: #aaabb8;
 }
-
 .card {
     background-color: #464866;
-  }
-#koledarContainer{
+}
+#koledarContainer {
     margin-top: 20px;
      border-radius: 3px;
 }
-
 #koledarContainer .container .container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.col{
+.col {
     margin-bottom: 10px;
 }
 
